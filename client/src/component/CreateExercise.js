@@ -23,9 +23,11 @@ function CreateExercise(){
              })
     }, [])
     return (
-        <div>
-            <h3>Create a new Exercise log</h3>
-            <form onSubmit={(event)=>{
+        <div className="exercise-log">
+            <div className="title">
+                <h3>Create a new Exercise log</h3>
+            </div>
+            <form className="exrcise-form" onSubmit={(event)=>{
                   event.preventDefault();
                   const exercise = {
                       username,
@@ -59,11 +61,14 @@ function CreateExercise(){
                            onChange={(event)=> setDuration(event.target.value)}
                     />
                 </div>
-                <div>
+                <div className="form-group">
                     <label>Date:</label>
-                    <DatePicker selected={date} 
-                                onChange={(date) =>{setDate(date)}}
-                    />
+                    <br/>
+                    <div className="date">
+                        <DatePicker selected={date} 
+                                    onChange={(date) =>{setDate(date)}}
+                        />
+                    </div>
                 </div>
                 <div className="form-group">
                     <button type="submit">Submit</button>

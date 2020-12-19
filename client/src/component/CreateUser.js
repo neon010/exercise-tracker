@@ -6,7 +6,7 @@ function CreateUser(){
     const [username, setUsername] = useState("");
 
     return (
-        <div>
+        <div className="new-user">
             <h3>Create New User</h3>
             <form onSubmit={(event)=>{
                     event.preventDefault();

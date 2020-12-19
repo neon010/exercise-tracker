@@ -19,23 +19,25 @@ function ExerciseList(){
     };
 
     return (
-        <div>
-            <h3>Logged Exercises</h3>
+        <div className="exercise-table">
+            <div className="table-title">
+                <h3>Logged Exercises</h3>
+            </div>
             <table className="table">
-            <thead className="thead-light">
-                <tr>
-                    <th>Username</th>
-                    <th>Description</th>
-                    <th>Duration</th>
-                    <th>Date</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {exercises.map((currentExercise)=>{
-                    return <Exercise exercise={currentExercise} key={currentExercise._id} deleteExercise={deleteExercise} />
-                })}
-            </tbody>
+                <thead className="thead-light">
+                    <tr>
+                        <th>Username</th>
+                        <th>Description</th>
+                        <th>Duration</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {exercises.map((currentExercise)=>{
+                        return <Exercise exercise={currentExercise} key={currentExercise._id} deleteExercise={deleteExercise} />
+                    })}
+                </tbody>
             </table>
         </div>
     )
